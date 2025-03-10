@@ -4,14 +4,15 @@
     --red: #9F001A;
     
     --dark: #333;
-    --navy: #37384c;
+    --nav-color: #212121;
     --creme: #e9dccc;
     --white: #fff;
+    --black: #000;
     --body: 'Open Sans', sans-serif;
-    --headings: 'Merriweather', serif;
-    --h2-banner-p: 2rem;
+    --headings-font: 'Chronicle Display', serif;
+    --description-p-font:'Libre Franklin', sans-serif;
     --link-nav: 1.2rem;
-    --banner-h2: 4rem;
+    --banner-h2: 6rem;
     --menu-items-h3: bold 1.5rem 'Open Sans', sans-serif;
     --menu-items-ul: 1.2rem;
     --text-shadow: 0.125rem 0.125rem 0.125rem #333;
@@ -20,23 +21,26 @@
 /* Utility Classes */
 
 .btn {
+    display: flex;  
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
     background-color: var(--off-black);
-    color: #fff;
-    transition: background-color 0.4s ease;
+    font-size: 1.5rem;
+    font-family: var(--headings-font);
+    width: 240px;
+    height: 72px;
+    text-decoration: none;
+    border-radius: 5px;
 }
 
 .btn:hover {
     background-color: var(--red);
-    color: #fff;
 }
 
 .inner-container {
     margin: 0 auto;
-    max-width: 960px;
-}
- 
-.inner-container:not(.menu) {
-    padding: 3rem 1rem;
+    max-width: 1440px;
 }
  
 .flex-container {
@@ -49,11 +53,15 @@
 h1,
 h2,
 h3 {
-    font-family: var(--headings);
+    font-family: var(--headings-font);
+}
+h1 {
+    font-size: 1.5rem;
+    font-weight: normal;
 }
 h2 {
-    font-size: var(--h2-banner-p);
-    padding: 1rem 0;
+    font-size: var(--banner-h2);
+    font-weight: normal;
 }
 p {
     padding-bottom: 1rem;
@@ -82,21 +90,21 @@ body {
 /* Navigation */
 nav {
     padding: 0.5rem;
-    background-color: ;
+    background-color: var(--white);
 }
 nav .inner-container > div {
     align-items: center;
 }
-nav img {
+/*nav img {
     margin-right: 1rem;
     width: 4rem;
-}
+}*/
 nav ul li {
     display: flex;
     align-items: center;
 }
 nav ul li a {
-    color: var(--navy);
+    color: var(--nav-color);
     font-size: var(--link-nav);
     margin-left: 1rem;
     text-decoration: none;
@@ -104,11 +112,49 @@ nav ul li a {
 nav ul li a:hover {
     text-decoration: underline;
 }
-
+/*
 header section {
     background: center / cover no-repeat url('../img/hero-banner-large.webp');
     color: var(--white);
     text-align: center;
     line-height: 1.2;
     text-shadow: var(--text-shadow);
+}*/
+
+header section {
+    color: var(--black);
+    background-color: var(--red);
+    flex-flow: column;
+}
+
+header .banner-title {
+    background: center / cover no-repeat url('../img/hero-banner-large.webp');
+}
+header .banner-title h2 {
+    font-size: var(--banner-h2);
+    padding-left: 5rem;
+    padding-top: 28rem;
+    color:  var(--white);
+}
+
+header .banner-description {
+    flex-flow: column;
+    padding: 0rem 5rem 5rem 5rem;
+}
+
+header .banner-description p {
+    font-size: 1.5rem;
+    max-width: 720px;
+    font-family: var(--description-p-font);
+}
+
+header .banner-description a {
+    margin-left: calc((100% - 240px)/2);
+    margin-top: 2rem;
+}
+
+/* Menu */
+.menu {
+    background-color: var(--creme);
+    padding: 2rem;
 }
