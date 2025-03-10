@@ -1,0 +1,114 @@
+:root {
+    --box-shadow: 0 2px 8px 4px rgba(0,0,0,0.15);
+    --off-black: #111111;
+    --red: #9F001A;
+    
+    --dark: #333;
+    --navy: #37384c;
+    --creme: #e9dccc;
+    --white: #fff;
+    --body: 'Open Sans', sans-serif;
+    --headings: 'Merriweather', serif;
+    --h2-banner-p: 2rem;
+    --link-nav: 1.2rem;
+    --banner-h2: 4rem;
+    --menu-items-h3: bold 1.5rem 'Open Sans', sans-serif;
+    --menu-items-ul: 1.2rem;
+    --text-shadow: 0.125rem 0.125rem 0.125rem #333;
+}
+
+/* Utility Classes */
+
+.btn {
+    background-color: var(--off-black);
+    color: #fff;
+    transition: background-color 0.4s ease;
+}
+
+.btn:hover {
+    background-color: var(--red);
+    color: #fff;
+}
+
+.inner-container {
+    margin: 0 auto;
+    max-width: 960px;
+}
+ 
+.inner-container:not(.menu) {
+    padding: 3rem 1rem;
+}
+ 
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.125rem;
+}
+
+/* Typography */
+h1,
+h2,
+h3 {
+    font-family: var(--headings);
+}
+h2 {
+    font-size: var(--h2-banner-p);
+    padding: 1rem 0;
+}
+p {
+    padding-bottom: 1rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover:not([class]) {
+    text-decoration: underline;
+}
+
+/* Universal Styles */
+header {
+    background-color: lightblue;
+    box-shadow: var(--box-shadow);
+    padding: 0.5rem;
+}
+
+body {
+    color: var(--off-black);
+    line-height: 1.5;
+}
+
+/* Navigation */
+nav {
+    padding: 0.5rem;
+    background-color: ;
+}
+nav .inner-container > div {
+    align-items: center;
+}
+nav img {
+    margin-right: 1rem;
+    width: 4rem;
+}
+nav ul li {
+    display: flex;
+    align-items: center;
+}
+nav ul li a {
+    color: var(--navy);
+    font-size: var(--link-nav);
+    margin-left: 1rem;
+    text-decoration: none;
+}
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+header section {
+    background: center / cover no-repeat url('../img/hero-banner-large.webp');
+    color: var(--white);
+    text-align: center;
+    line-height: 1.2;
+    text-shadow: var(--text-shadow);
+}
