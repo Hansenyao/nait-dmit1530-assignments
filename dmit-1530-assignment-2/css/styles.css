@@ -89,11 +89,12 @@ body {
 
 /* Navigation */
 nav {
-    padding: 0.5rem;
+    padding: 0.5rem 20rem;
     background-color: var(--white);
 }
 nav .inner-container > div {
     align-items: center;
+    gap: 8rem;
 }
 /*nav img {
     margin-right: 1rem;
@@ -112,14 +113,27 @@ nav ul li a {
 nav ul li a:hover {
     text-decoration: underline;
 }
-/*
-header section {
-    background: center / cover no-repeat url('../img/hero-banner-large.webp');
-    color: var(--white);
-    text-align: center;
-    line-height: 1.2;
-    text-shadow: var(--text-shadow);
-}*/
+
+nav ul li .menu-horizontal {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    text-decoration: none;
+}
+nav ul li .menu-vertical {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1rem;
+}
+nav ul li .menu-item:hover {
+    color: var(--red);
+    text-decoration: none;
+}
+nav ul li .menu-item:hover svg path{
+    stroke: var(--red);
+}
 
 header section {
     color: var(--black);
@@ -128,12 +142,12 @@ header section {
 }
 
 header .banner-title {
-    background: center / cover no-repeat url('../img/hero-banner-large.webp');
+    background: top / cover no-repeat url('../img/hero-banner-large.webp');
 }
 header .banner-title h2 {
     font-size: var(--banner-h2);
     padding-left: 5rem;
-    padding-top: 28rem;
+    padding-top: 36rem;
     color:  var(--white);
 }
 
