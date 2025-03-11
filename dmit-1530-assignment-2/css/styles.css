@@ -74,9 +74,58 @@ p {
 a {
     text-decoration: none;
 }
-
 a:hover:not([class]) {
     text-decoration: underline;
+}
+
+/* Dropdown menu style */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-btn {
+    background: var(--white);
+    color: var(--nav-color);
+    font-size: var(--link-nav);
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    border-radius: 5px;
+    display: none;
+    min-width: 200px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.dropdown-menu a {
+    display: block;
+    padding: 10px;
+    color: var(--nav-color);
+    font-size: var(--link-nav);
+    margin-left: 1rem;
+    text-decoration: none;
+}
+/* Set dropdown button and icon coloe in hover mode */
+.dropdown:hover .dropdown-btn {
+    color: var(--red);
+}
+.dropdown:hover svg path{
+    stroke: var(--red);
+}
+/* Click button to show menu items */
+/*
+.dropdown:focus-within .dropdown-menu {
+    display: block;
+}
+*/
+/* move mouse to show menu items */
+.dropdown:hover .dropdown-menu {
+    display: block;
 }
 
 /* Universal Styles */
@@ -138,6 +187,7 @@ nav ul li .menu-item:hover {
 nav ul li .menu-item:hover svg path{
     stroke: var(--red);
 }
+
 
 header section {
     color: var(--black);
