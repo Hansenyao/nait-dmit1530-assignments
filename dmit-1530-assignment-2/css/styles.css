@@ -137,6 +137,9 @@ p {
 }
 
 a {
+    color: var(--nav-color);
+    font-size: var(--link-nav);
+    margin-left: 1rem;
     text-decoration: none;
 }
 a:hover:not([class]) {
@@ -145,9 +148,7 @@ a:hover:not([class]) {
 
 /* Universal Styles */
 header {
-    background-color: lightblue;
     box-shadow: var(--box-shadow);
-    padding: 0.5rem;
 }
 
 body {
@@ -155,24 +156,20 @@ body {
     line-height: 1.5;
 }
 
-/* Navigation */
-nav {
-    padding: 0.5rem 20rem;
-    background-color: var(--white);
-}
-nav .inner-container > div {
+/* The top bar styles */
+header .top-bar {
+    padding: 0 20rem;
     align-items: center;
-    gap: 8rem;
+}
+
+/* Navigation */
+nav.flex-container {
+    gap: 10rem;
+    background-color: var(--white);
 }
 nav ul li {
     display: flex;
     align-items: center;
-}
-nav ul li a {
-    color: var(--nav-color);
-    font-size: var(--link-nav);
-    margin-left: 1rem;
-    text-decoration: none;
 }
 
 /* Header styles */
