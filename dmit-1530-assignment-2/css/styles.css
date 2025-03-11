@@ -24,6 +24,16 @@
 }
 
 /* Utility Classes */
+.inner-container {
+    margin: 0 auto;
+    max-width: 1440px;
+}
+ 
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.125rem;
+}
 
 .btn {
     display: flex;  
@@ -43,39 +53,20 @@
     background-color: var(--red);
 }
 
-.inner-container {
-    margin: 0 auto;
-    max-width: 1440px;
-}
- 
-.flex-container {
+/* Icon button style */
+.icon-btn {
     display: flex;
-    justify-content: space-between;
-    gap: 1.125rem;
+    flex-flow: column;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1rem;
 }
-
-/* Typography */
-h1,
-h2,
-h3 {
-    font-family: var(--headings-font);
-}
-h1 {
-    font-size: 1.5rem;
-    font-weight: normal;
-}
-h2 {
-    font-weight: normal;
-}
-p {
-    padding-bottom: 1rem;
-}
-
-a {
+.icon-btn:hover {
+    color: var(--red);
     text-decoration: none;
 }
-a:hover:not([class]) {
-    text-decoration: underline;
+.icon-btn:hover svg path{
+    stroke: var(--red);
 }
 
 /* Dropdown menu style */
@@ -87,7 +78,7 @@ a:hover:not([class]) {
     background: var(--white);
     color: var(--nav-color);
     font-size: var(--link-nav);
-    padding: 10px 15px;
+    padding-top: 10px;
     border-radius: 5px;
     cursor: pointer;
     border: none;
@@ -128,6 +119,30 @@ a:hover:not([class]) {
     display: block;
 }
 
+/* Typography */
+h1,
+h2,
+h3 {
+    font-family: var(--headings-font);
+}
+h1 {
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+h2 {
+    font-weight: normal;
+}
+p {
+    padding-bottom: 1rem;
+}
+
+a {
+    text-decoration: none;
+}
+a:hover:not([class]) {
+    text-decoration: underline;
+}
+
 /* Universal Styles */
 header {
     background-color: lightblue;
@@ -149,10 +164,6 @@ nav .inner-container > div {
     align-items: center;
     gap: 8rem;
 }
-/*nav img {
-    margin-right: 1rem;
-    width: 4rem;
-}*/
 nav ul li {
     display: flex;
     align-items: center;
@@ -163,32 +174,8 @@ nav ul li a {
     margin-left: 1rem;
     text-decoration: none;
 }
-nav ul li a:hover {
-    text-decoration: underline;
-}
 
-nav ul li .menu-horizontal {
-    display: flex;
-    gap: 4px;
-    align-items: center;
-    text-decoration: none;
-}
-nav ul li .menu-vertical {
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    text-decoration: none;
-    font-size: 1rem;
-}
-nav ul li .menu-item:hover {
-    color: var(--red);
-    text-decoration: none;
-}
-nav ul li .menu-item:hover svg path{
-    stroke: var(--red);
-}
-
-
+/* Header styles */
 header section {
     color: var(--black);
     background-color: var(--red);
