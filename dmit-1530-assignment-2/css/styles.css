@@ -196,8 +196,8 @@ body {
 
 /* The top bar styles */
 header .top-bar {
-    padding: 0 15%;
     align-items: center;
+    padding: 0 4%;
 }
 
 /* Navigation */
@@ -219,20 +219,20 @@ header section {
 
 header .banner-title h2 {
     color:  var(--white);
-    padding-left: 5rem;
+    padding-left: 5%;
     padding-top: 36rem;
 }
 
 header .banner-description {
     flex-flow: column;
-    padding: 0rem 5rem 5rem 5rem;
+    padding: 0rem 5rem 5rem 5%;
 }
 
 header .banner-description p {
     max-width: 720px;
 }
 
-header .banner-description a {
+header .banner-description .btn {
     margin-left: calc((100% - 240px)/2);
     margin-top: 2rem;
 }
