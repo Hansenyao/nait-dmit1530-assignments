@@ -41,6 +41,7 @@
     background-color: var(--btn-backgroud-color);
     font-size: var(--btn-text-size);
     font-family: var(--headings-text-font);
+    font-weight: normal;
     width: 240px;
     height: 72px;
     text-decoration: none;
@@ -161,7 +162,7 @@
 h1,
 h2,
 h3 {
-    font-family: var(--headings-font);
+    font-family: var(--headings-text-font);
 }
 h1 {
     font-size: 1.5rem;
@@ -170,13 +171,16 @@ h1 {
 h2 {
     font-weight: normal;
 }
+h3 {
+    font-size: 3rem;
+    font-weight: normal;
+}
 p {
     padding-bottom: 1rem;
 }
 
 a {
     color: var(--nav-text-color);
-    margin-left: 1rem;
     text-decoration: none;
 }
 a:hover:not([class]) {
@@ -184,9 +188,9 @@ a:hover:not([class]) {
 }
 
 /* Universal Styles */
-header {
+/*header {
     box-shadow: var(--box-shadow);
-}
+}*/
 
 body {
     color: var(--body-text-color);
@@ -237,6 +241,51 @@ header .banner-description .btn {
     margin-top: 2rem;
 }
 
+/* Custom Tarian Elements */
+.custom-tarian {
+	display: flex;
+	flex-flow: row;
+    align-items: center;
+    padding: 0 5rem;
+    gap: 2rem;
+}
+
+.layered-swatches {
+    position: relative;
+    width: 50%;
+    margin-top: 5rem;
+    margin-bottom: 42rem;
+}
+
+/* images swatch */
+.swatch{
+    width: 292px;
+    height: 441px;
+    position: absolute;
+    display: flex;
+    flex-flow: column;
+    transition: transform 0.3s ease-in-out;
+}
+.swatch:hover {
+    transform: scale(1.2);
+    z-index: 1;
+}
+.swatch:nth-child(2) {
+    top: 13rem;
+    left: 33%;
+}
+.custom-tarian-description {
+    display: flex;
+    flex-flow: column;
+    width: 50%;
+}
+.custom-tarian-description h3 {
+    margin-bottom: 18px;
+}
+.custom-tarian-description .btn {
+    margin-top: 18px;
+}
+
 
 /* Media Queries */
 /* mobile phone screen */
@@ -263,6 +312,33 @@ header .banner-description .btn {
     header .banner-description p {
         font-size: var(--banner-text-fontsize-sm);
     }
+    /* Custom Tarian Elements */
+    .custom-tarian{
+        display: flex;
+        flex-flow: column;
+        padding: 0;
+    }
+    .layered-swatches {
+        position: relative;
+        width: 100%;
+        margin-bottom: 18rem;
+    }
+    .swatch{
+        width: 205px;
+        height: 154px;
+        overflow: hidden;
+    }
+    .swatch:nth-child(1) {
+        left: 15%;
+    }
+    .swatch:nth-child(2) {
+        top: 8rem;
+        left: 45%;
+    }
+    .custom-tarian-description {
+        width: 100%;
+        padding: 2rem;
+    }
 
 }
 /* mobile tablet screen */
@@ -288,6 +364,32 @@ header .banner-description .btn {
     /* Change banner description text font size */
     header .banner-description p {
         font-size: var(--banner-text-fontsize-md);
+    }
+    /* Custom Tarian Elements */
+    .custom-tarian {
+        display: flex;
+        flex-flow: column;
+    }
+    .layered-swatches {
+        position: relative;
+        width: 100%;
+        margin-bottom: 32rem;
+    }
+    .swatch{
+        width: 274px;
+        height: 274px;
+        overflow: hidden;
+    }
+    .swatch:nth-child(1) {
+        left: 20%;
+    }
+    .swatch:nth-child(2) {
+        top: 13rem;
+        left: 45%;
+    }
+    .custom-tarian-description {
+        width: 100%;
+        margin-bottom: 5rem;
     }
 }
 /* PC desktop screen */
