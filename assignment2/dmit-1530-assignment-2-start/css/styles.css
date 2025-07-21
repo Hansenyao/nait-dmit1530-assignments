@@ -9,7 +9,7 @@
 /* Utility Classes */
 
 .inner-container {
-    max-width: 1440px;
+    max-width: 30rem;
     margin: auto;
 }
 
@@ -126,17 +126,16 @@
 .banner-body {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 2rem;
     color: var(--off-black);
     background-color: var(--red);
-    padding: 4rem 1rem 2rem 1rem;
+    padding: 4rem 1rem;
 }
 .banner-body p {
     font-size: 1.25rem;
 }
 .banner-body .btn {
     margin-left: auto;
-    margin-bottom: 1rem;
 }
 
 .custom-tarian {
@@ -144,6 +143,7 @@
     flex-direction: column;
     gap: 1rem;
     padding: 5rem 1rem;
+    margin: auto;
 }
 .layered-swatches {
     width: 100%;
@@ -267,18 +267,6 @@
 .rental-prices-item-body .btn {
     margin: auto;
 }
-/*
-.rental-prices-item-footer {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    border-top: solid 1px #CACACA;
-    padding-top: 2rem;
-    padding-left: 1rem;
-}
-.rental-prices-item-footer .btn {
-    margin: auto;
-}*/
 
 .footer-title {
     display: flex;
@@ -300,7 +288,10 @@
     flex-direction: column;
     gap: 2rem;
 }
-.footer-menu ul {
+.footer-menu>section {
+    width: 100%;
+}
+.footer-menu>section ul {
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -387,4 +378,58 @@ footer h3 {
     font-weight: bold;
     text-transform: uppercase;
     font-family: 'Libre Franklin', sans-serif;
+}
+
+/*Media Query*/
+@media screen and (min-width:640px) {
+    .banner-title h2 {
+        left: 3rem;
+        bottom: -6rem;
+        font-size: 4rem;
+    }
+    .banner-body {
+        padding: 8rem 3rem 4rem 3rem;
+    }
+    .banner-body p {
+        width: 55%;
+    }
+    .banner-body .btn {
+        margin: auto;
+    }
+
+    .custom-tarian h3 {
+        font-size: 3rem;
+    }
+
+    .tartan-finder {
+        flex-direction: row;
+    }
+    .tartan-finder :first-child {
+        width: 67%;
+    }
+    .tartan-finder picture {
+        display: block;
+        overflow: hidden; 
+    }
+    .tartan-finder picture img {
+        height: 100%;
+        object-fit: cover;
+    }
+    .tartan-finder .tartan-finder-body {
+        order: -1;
+        padding-left: 3rem;
+        padding-right: 2rem;
+    }
+    
+    footer {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+    footer .footer-menu {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .footer-menu>section{
+        width: calc((100% - 2rem) / 2);
+    }
 }
