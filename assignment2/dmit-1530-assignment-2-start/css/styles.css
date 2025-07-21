@@ -76,11 +76,23 @@
     border-bottom: solid 1px var(--off-black);
 }
 
-.text-memu ul {
+.drop-down {
+    position:relative;
+    display: inline-block;
+}
+.drop-down-btn {
+    border: none;
+    padding: 0;
+    background-color: white;
+}
+.drop-down-btn>svg {
+    visibility: hidden;
+}
+.drop-down-menu {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    margin: 0.5rem 0 0 1rem;
+    padding-left: 2rem;
 }
 
 .icon-menu {
@@ -432,4 +444,64 @@ footer h3 {
     .footer-menu>section{
         width: calc((100% - 2rem) / 2);
     }
+}
+@media screen and (min-width:960px) {
+    header {
+        padding: 1rem 4rem;
+    }
+    .toggle-btn {
+        display: none;
+    }
+    nav {
+        display: flex;
+        flex-direction: row;
+        gap: 5rem;
+        align-items: center;
+    }
+    nav.collapsed {
+        visibility: visible;
+        opacity: 1;
+        max-height: unset;
+        width: unset;
+        position: unset;
+    }
+    .drop-down-btn>svg {
+        visibility: visible;
+    }
+    /* Set dropdown menu style */
+    .drop-down-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        gap: 0.5rem;
+        padding: 1rem;
+        min-width: 200px;
+        background: white;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    /* Make sure dropdown menu is visible when .drop-down menu item is focused */
+    .drop-down:hover svg path {
+        stroke: var(--red);
+    }
+    .drop-down:hover .drop-down-btn {
+        cursor: pointer;
+        color: var(--red);
+    }
+    .drop-down:hover .drop-down-menu {
+        display: flex;
+    }
+
+    .text-memu {
+        flex-direction: row;
+        border: none;
+        gap: 1rem;
+        padding: 0;
+    }
+    .icon-menu {
+        padding: 0;
+        gap: 1rem;
+    }
+
 }
