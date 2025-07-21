@@ -2,9 +2,34 @@
     --box-shadow: 0 2px 8px 4px rgba(0,0,0,0.15);
     --off-black: #111111;
     --red: #9F001A;
+    /**/
+    --a-color: #212121
 }
 
 /* Utility Classes */
+
+.inner-container {
+    max-width: 1440px;
+    margin: auto;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.collapsed {
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.expanded {
+    max-height: unset;
+    opacity: unset;
+    visibility: visible;
+}
 
 .btn {
     background-color: var(--off-black);
@@ -17,10 +42,74 @@
     color: #fff;
 }
 
+.toggle-btn {
+    background-color: unset;
+    border: unset;
+}
+
+.toggle-btn svg {
+    width: 2rem;
+    display: block;
+}
+
+.toggle-btn:hover {
+    cursor: pointer;
+}
+
+.text-memu {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem 0 2rem 1rem;
+    border: none;
+    border-top: solid 1px var(--off-black);
+    border-bottom: solid 1px var(--off-black);
+}
+
+.text-memu ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 0.5rem 0 0 1rem;
+}
+
+.icon-menu {
+    display: flex;
+    gap: 2rem;
+    padding: 1rem 0 1rem 1rem;
+}
+
+.icon-btn {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    text-decoration: none;
+    color: var(--a-color);
+}
+.icon-btn:hover {
+    color: var(--red);
+    text-decoration: none;
+}
+.icon-btn:hover svg path{
+    stroke: var(--red);
+}
+
 /* Typography */
+h1, 
+h2, 
+h3 {
+    font-family: var(--headings-text-font);
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: normal;
+}
 
 a {
     text-decoration: none;
+    color: var(--a-color);
+    font-family: 'Libre Franklin', sans-serif;
 }
 
 a:hover:not([class]) {
@@ -32,4 +121,19 @@ a:hover:not([class]) {
 body {
     color: var(--off-black);
     line-height: 1.5;
+}
+
+header .inner-container {
+    height: 4.25rem;
+    padding: 0.5rem 1rem;
+}
+
+nav {
+    background-color: #fff;
+    box-shadow: var(--shadow);
+    position: absolute;
+    left: 0;
+    top: 4.25rem;
+    width: 100%;
+    z-index: 10;
 }
