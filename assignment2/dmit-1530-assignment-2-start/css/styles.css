@@ -34,9 +34,14 @@
 .btn {
     background-color: var(--off-black);
     color: #fff;
-    transition: background-color 0.4s ease;
+    cursor: pointer;
+    display: block;
+    padding: 1rem;
+    text-align: center;
+    width: 15rem;
+    font-size: 1.5rem;
+    border-radius: 5px;
 }
-
 .btn:hover {
     background-color: var(--red);
     color: #fff;
@@ -94,11 +99,51 @@
     stroke: var(--red);
 }
 
+.banner-title {
+    position: relative;
+}
+.banner-title img {
+    display: block;
+    width: 100%;
+}
+.banner-title h2 {
+    position: absolute;
+    left: 1rem;
+    bottom: 0;
+    color: white;
+    font-size: 2.25rem;
+    font-weight: normal;
+    z-index: 1;
+}
+
+.banner-body {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: var(--off-black);
+    background-color: var(--red);
+    padding: 0 1rem 2rem 1rem;
+}
+.banner-body h2 {
+    font-size: 2.25rem;
+    font-weight: normal;
+}
+.banner-body p {
+    font-size: 1.25rem;
+    font-weight: normal;
+    font-family: 'Libre Franklin', sans-serif;
+}
+.banner-body .btn {
+    margin-left: auto;
+    margin-bottom: 1rem;
+}
+
 /* Typography */
 h1, 
 h2, 
-h3 {
-    font-family: var(--headings-text-font);
+h3,
+.btn {
+    font-family: 'Chronicle Display', serif;
 }
 
 h1 {
@@ -121,6 +166,10 @@ a:hover:not([class]) {
 body {
     color: var(--off-black);
     line-height: 1.5;
+}
+
+header {
+    padding: 1rem;
 }
 
 header .inner-container {
