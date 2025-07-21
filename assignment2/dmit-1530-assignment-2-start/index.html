@@ -102,14 +102,18 @@
         </div>
 
         <!-- Custom Tartan Section -->
-        <div>
+        <div class="custom-tarian">
             <div class="layered-swatches">
-                <div class="swatch">
-                    <img src="img/card-fabric.webp" alt="">
-                </div>
-                <div class="swatch">
-                    <img src="img/card-model.webp" alt="">
-                </div>
+                <picture>
+                    <source media="(min-width: 960px)" srcset="img/card-fabric-lg.webp">
+                    <source media="(min-width: 640px)" srcset="img/card-fabric-md.webp">
+                    <img src="img/card-fabric-sm.webp" alt="">
+                </picture>
+                <picture>
+                    <source media="(min-width: 960px)" srcset="img/card-model-lg.webp">
+                    <source media="(min-width: 640px)" srcset="img/card-model-md.webp">
+                    <img src="img/card-model-sm.webp" alt="">
+                </picture>
             </div>
             <h3>Fresh Frae Oor Loom</h3>
             <p>Make your ideas a reality with our tartan design and weaving service.</p>

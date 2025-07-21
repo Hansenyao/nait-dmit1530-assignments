@@ -126,19 +126,46 @@
     background-color: var(--red);
     padding: 4rem 1rem 2rem 1rem;
 }
-.banner-body h2 {
-    font-size: 2.25rem;
-    font-weight: normal;
-}
 .banner-body p {
     font-size: 1.25rem;
-    font-weight: normal;
-    font-family: 'Libre Franklin', sans-serif;
 }
 .banner-body .btn {
     margin-left: auto;
     margin-bottom: 1rem;
 }
+
+.custom-tarian {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 5rem 1rem;
+}
+.layered-swatches {
+    width: 100%;
+}
+.layered-swatches picture {
+    width: 66%;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+}
+.layered-swatches picture:hover {
+    transform: scale(1.2);
+    z-index: 1;
+}
+.layered-swatches picture:nth-of-type(2) {
+    top: -3rem;
+    left: 34%;
+}
+.layered-swatches picture img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.custom-tarian .btn {
+    margin-top: 1rem;
+}
+
+
 
 /* Typography */
 h1, 
@@ -146,10 +173,23 @@ h2,
 h3,
 .btn {
     font-family: 'Chronicle Display', serif;
+    font-weight: normal;
 }
 
 h1 {
     font-size: 1.5rem;
+}
+
+h2 {
+    font-size: 2.25rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+p {
+    font-family: 'Libre Franklin', sans-serif;
     font-weight: normal;
 }
 
