@@ -19,6 +19,12 @@
     align-items: center;
 }
 
+.flex-wide {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .collapsed {
     max-height: 0;
     opacity: 0;
@@ -189,12 +195,77 @@
     margin-top: 2rem;
 }
 
-
+.rental-prices {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 4rem 1rem;
+}
+.rental-prices-title {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-bottom: 2rem;
+}
+.rental-prices-title h3 {
+    text-align: center;
+}
+.rental-prices-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    border: solid 1px #CACACA;
+    border-radius: 4px;
+    box-shadow: var(--box-shadow);
+    padding-bottom: 3rem;
+}
+.rental-prices-item h4 {
+    width: 100%;
+    color: white;
+    border-radius: 4px 4px 0 0;
+    background-color: var(--off-black);
+    font-size: 1.5rem;
+    padding: 1rem 0;
+    text-align: center;
+}
+.rental-prices-item-body {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+    align-items: center;
+}
+.rental-prices-item-body h5 {
+    font-size: 2rem;
+    margin: 0;
+}
+.rental-prices-item-body ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 0;
+}
+.rental-prices-item-body p {
+    padding: 0 1rem;
+}
+.rental-prices-item-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    border-top: solid 1px #CACACA;
+    padding-top: 2rem;
+    padding-left: 1rem;
+}
+.rental-prices-item-footer .btn {
+    margin: auto;
+}
 
 /* Typography */
 h1, 
 h2, 
 h3,
+h4,
+h5,
 .btn {
     font-family: 'Chronicle Display', serif;
     font-weight: normal;
@@ -251,4 +322,12 @@ nav {
     top: 4.25rem;
     width: 100%;
     z-index: 10;
+}
+
+footer {
+    color: white;
+    background-color: var(--off-black);
+}
+footer a {
+    color: white;
 }
