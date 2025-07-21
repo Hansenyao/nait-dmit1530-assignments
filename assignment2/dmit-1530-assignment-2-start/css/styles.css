@@ -19,10 +19,9 @@
     align-items: center;
 }
 
-.flex-wide {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.divider {
+    height: 1px;
+    background-color: #CACACA;
 }
 
 .collapsed {
@@ -260,6 +259,32 @@
     margin: auto;
 }
 
+.footer-title {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+}
+.footer-title p{
+    color: #D8D8D8;
+    font-style: italic;
+}
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.footer-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.footer-menu ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
 /* Typography */
 h1, 
 h2, 
@@ -325,9 +350,19 @@ nav {
 }
 
 footer {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    padding: 5rem 1rem;
     color: white;
     background-color: var(--off-black);
 }
 footer a {
     color: white;
+}
+footer h3 {
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Libre Franklin', sans-serif;
 }
