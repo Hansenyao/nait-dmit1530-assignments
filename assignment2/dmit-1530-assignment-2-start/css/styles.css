@@ -384,12 +384,15 @@ nav {
 }
 
 footer {
+    color: white;
+    background-color: var(--off-black);
+    padding: 4rem 1rem;
+}
+footer .inner-container {
     display: flex;
     flex-direction: column;
     gap: 4rem;
-    padding: 5rem 1rem;
-    color: white;
-    background-color: var(--off-black);
+    max-width: unset;
 }
 footer a {
     color: white;
@@ -449,7 +452,8 @@ footer h3 {
         padding-right: 2rem;
     }
     
-    footer {
+    footer .inner-container {
+        max-width: unset;
         padding-left: 3rem;
         padding-right: 3rem;
     }
@@ -553,5 +557,27 @@ footer h3 {
     }
     .rental-prices-item .btn {
         margin-top: auto;
+    }
+
+    footer .inner-container{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    footer .footer-title {
+        width: 100%;
+        padding-left: 29rem;
+        padding-right: 29rem;
+    }
+    footer .divider {
+        width: 100%;
+    }
+    .footer-contact {
+        width: 25%;
+    }
+    .footer-menu {
+        width: calc(100% - 25% - 4rem);
+    }
+    .footer-menu>section{
+        width: calc((100%  - 3*2rem) / 4);
     }
 }
