@@ -164,11 +164,6 @@
 }
 .layered-swatches picture {
     width: 66%;
-    transition: transform 0.3s ease-in-out;
-}
-.layered-swatches picture:hover {
-    transform: scale(1.2);
-    z-index: 1;
 }
 .layered-swatches picture:nth-of-type(2) {
     position: relative;
