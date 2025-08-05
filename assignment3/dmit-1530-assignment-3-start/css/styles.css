@@ -18,7 +18,8 @@
 .inner-container {
     width: 100%;
     max-width: 90rem;
-    padding: 0 1.5rem;
+    padding: 0 2rem;
+    margin: 0 auto;
 }
 
 .sr-only {
@@ -57,11 +58,8 @@ h4 {
     font-weight: bold;
 }
 
-header a {
-    text-transform: uppercase;
-}
-
 a {
+    color: var(--text);
     text-decoration: none;
 }
 
@@ -73,12 +71,6 @@ a {
     top: 0;
     display: none;
 }
-/*
-.wide-flex {
-    display: flex;
-    flex-direction: column;
-    gap: 2.25rem;
-}*/
 
 .modal {
     background-color: white;
@@ -172,6 +164,10 @@ a {
     flex-wrap: nowrap;
     align-items: center;
     justify-content: space-between;
+    margin: 1rem 0;
+}
+.primary-nav ul {
+    color: var(--text);
 }
 .toggle-btn {
     background-color: unset;
@@ -191,14 +187,12 @@ a {
     max-height: 0;
     opacity: 0;
     display: none;
-    /*visibility: hidden;*/
     transition: all 0.3s;
 }
 
 .expanded {
     max-height: unset;
     opacity: unset;
-    /*visibility: visible;*/
     display: unset;
 }
 
@@ -206,6 +200,7 @@ a {
     color: white;
     background-color: #999;
     text-align: center;
+    padding-bottom: 2rem;
 }
 .hero-banner h2 {
     font-size: 12.5rem;
@@ -223,12 +218,17 @@ a {
 .division {
     display: flex;
     flex-direction: column;
-    gap: 2.25rem;
+    gap: 3rem;
     margin-top: 3rem;
 }
 .division img {
     width: 100%;
     height: auto;
+}
+.division-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2.25rem;
 }
 .division-card {
     display: flex;
@@ -297,7 +297,7 @@ a {
     display: flex;
     flex-direction: column;
     gap: 3rem;
-    margin: 4rem auto;
+    margin: 3rem auto;
     text-align: center;
 }
 .footer-menu>section {
@@ -320,7 +320,7 @@ a {
     font-size: 0.75rem;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1280px) {
     .modal {
         display: flex;
         flex-wrap: wrap;
@@ -342,5 +342,89 @@ a {
 
     .associates-nav a {
         font-size: 1.5rem;
+    }
+
+    .primary-nav {
+        padding: 0 2rem;
+    }
+    .toggle-btn {
+        display: none;
+    }
+    nav.collapsed,
+    nav.expanded {
+        display: unset;
+        opacity: 1;
+        box-shadow: unset;
+        max-height: unset;
+        width: unset;
+        position: unset;
+    }
+    nav.collapsed ul,
+    nav.expanded ul {
+        display: flex;
+        gap: 1rem;
+    }
+    nav.collapsed ul a,
+    nav.expanded ul a {
+        font-size: 2rem;
+    }
+
+    .hero-banner {
+        position: relative;
+        padding-bottom: 0;
+    }
+    .hero-banner>div {
+        background-color: rgba(0, 0, 0, 0.6);
+        position: absolute;
+        top: 60%;
+        width: 100vw;
+        padding: 0 2rem;
+    }
+    .hero-banner>div .inner-container {
+        margin: 0 auto;
+        text-align: start;
+        justify-content: space-between;
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+    }
+
+    .division {
+        padding: 0 4rem;
+    }
+    .division-content {
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 0 6rem;
+        gap: 5rem;
+    }
+    .division-card {
+        width: calc((100% - 2*5rem) / 3);
+    }
+    
+    .promo-section {
+        padding: 0 4rem;
+        flex-direction: row;
+        gap: 1.5rem;
+    }
+    .promo-stile {
+        width: calc((100% - 3*1.5rem) / 4);
+    }
+    
+    .product-section {
+        padding: 0 4rem;
+    }
+    .product-container {
+        margin: 0 6rem;
+    }
+
+    .footer-menu {
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 0 10rem;
+        justify-content: space-between;
+    }
+    .footer-menu>section {
+        width: 15.5rem;
     }
 }
