@@ -10,9 +10,15 @@
 
 /* Utility Classes */
 .flex-container {
-    align-items: center;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.inner-container {
+    width: 100%;
+    max-width: 90rem;
+    padding: 0 1.5rem;
 }
 
 .sr-only {
@@ -23,14 +29,36 @@
 
 /* Universal Styles */
 body {
-    font-family: 'Inter', 'Inria Sans', sans-serif;
+    font-family: 'Inter', 'Inria sans', sans-serif;
     background-color: var(--emerald);
 }
 
+header .flex-container {
+    flex-direction: column;
+}
+
+h1 {
+    font-family: 'Inria Serif', sans-serif;
+    font-size: 8rem;
+    font-weight: bold;
+    margin-left: 0;
+}
+
 h2 {
-    font-family: 'Inria Sans', sans-serif;
+    font-family: 'Inria sans', sans-serif;
     font-size: 3rem;
     font-weight: 300;
+}
+
+h3,
+h4 {
+    font-family: 'Inria sans', sans-serif;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+header a {
+    text-transform: uppercase;
 }
 
 a {
@@ -38,12 +66,12 @@ a {
 }
 
 .overlay{
-    background-color:rgba(0,0,0,0.65);
-    min-height:100vh;
-    min-width:100%;
-    position:fixed;
-    top:0;
-    display:none;
+    background-color: rgba(0,0,0,0.65);
+    min-height: 100vh;
+    min-width: 100%;
+    position: fixed;
+    top: 0;
+    display: none;
 }
 /*
 .wide-flex {
@@ -117,6 +145,180 @@ a {
     color: var(--grey);
 }
 
+.associates-nav {
+    width: 100%;
+    padding: 2rem 0;
+    background-color: var(--text);
+}
+.associates-nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+.associates-nav a {
+    color: white;
+    font-size: 1.25rem;
+}
+.associates-nav>ul>li:nth-child(1)>a {
+    font-weight: bold;
+}
+.associates-nav>ul>li:nth-child(2)>a {
+    font-style: italic;
+    font-weight: 100;
+}
+
+.primary-nav {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.toggle-btn {
+    background-color: unset;
+    border: unset;
+}
+.toggle-btn svg {
+    width: 8rem;
+    height: auto;
+    display: block;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.toggle-btn:hover svg {
+    transform: scale(1.1);
+}
+.collapsed {
+    max-height: 0;
+    opacity: 0;
+    display: none;
+    /*visibility: hidden;*/
+    transition: all 0.3s;
+}
+
+.expanded {
+    max-height: unset;
+    opacity: unset;
+    /*visibility: visible;*/
+    display: unset;
+}
+
+.hero-banner {
+    color: white;
+    background-color: #999;
+    text-align: center;
+}
+.hero-banner h2 {
+    font-size: 12.5rem;
+}
+.hero-banner p {
+    font-size: 3rem;
+    font-family: 'Inria sans', sans-serif;
+}
+.hero-banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.division {
+    display: flex;
+    flex-direction: column;
+    gap: 2.25rem;
+    margin-top: 3rem;
+}
+.division img {
+    width: 100%;
+    height: auto;
+}
+.division-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    border: 1px solid #ddd;
+    padding-bottom: 1rem;
+}
+.division-card>section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 0 1rem;
+}
+.division-card>a {
+    margin-left: auto;
+    margin-right: 2rem;
+}
+.division-card h3 {
+    font-size: 1.25rem;
+}
+.division-card p {
+    color: var(--grey);
+}
+
+.promo-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2.25rem;
+    margin-top: 4rem;
+    text-align: center;
+}
+.promo-stile {
+    color: white;
+    background-color: var(--text);
+    padding: 1.5rem 0;
+}
+.promo-stile>h4 {
+    margin-bottom: 0.5rem;
+}
+
+.product-section {
+    margin-top: 4rem;
+}
+.product-container {
+    display: flex;
+    overflow-x: scroll;
+    gap: 2rem;
+    margin-top: 2rem;
+    padding: 2rem 1rem;
+    scroll-snap-type: x mandatory;
+}
+.product-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex: 0 0 auto;
+    width: 12.5rem;
+    scroll-snap-align: start;
+    font-size: 0.85rem;
+    text-align: left;
+    cursor: pointer;
+}
+
+.footer-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin: 4rem auto;
+    text-align: center;
+}
+.footer-menu>section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.footer-menu ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.footer-copyright {
+    color: white;
+    background-color: var(--text);
+    padding: 1rem 0;
+}
+.footer-copyright>p {
+    text-align: center;
+    font-size: 0.75rem;
+}
 
 @media screen and (min-width: 768px) {
     .modal {
@@ -136,5 +338,9 @@ a {
         width: calc((100% - 40%));
         justify-content: center;
         padding: 0 3rem;
+    }
+
+    .associates-nav a {
+        font-size: 1.5rem;
     }
 }

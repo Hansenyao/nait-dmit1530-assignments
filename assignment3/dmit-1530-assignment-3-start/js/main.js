@@ -6,8 +6,12 @@ window.addEventListener("load",function(){
      */
     this.setTimeout(function open(event){
         myModal.style.display="block";}, 1000);
-    })
+})
 
-    document.querySelector("#close").addEventListener("click", function(){
-        myModal.style.display="none";
-    })
+document.querySelector("#close").addEventListener("click", function(){
+    myModal.style.display="none";
+})
+/*
+document.querySelector(".toggle-btn").addEventListener("click", () => {
+    document.querySelector(".collapsed").classList.toggle("expanded");
+})*/
