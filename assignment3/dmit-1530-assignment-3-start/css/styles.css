@@ -366,10 +366,31 @@ a {
 .membership-page form,
 .membership-page .faq-section {
     margin: 0 2rem;
+    border: 1px solid #ddd;
 }
 .membership-page form fieldset{
     border: 1px solid #ddd;
     padding: 2rem;
+    border: none;
+}
+.membership-page form .form-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0 2rem 4rem 2rem;
+}
+.membership-page form fieldset input{
+    padding: 0.5rem;
+}
+.membership-page form fieldset input:valid {
+    /*border: 2px solid #0f9d58;*/
+    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='%230f9d58'><path stroke-linecap='round' stroke-linejoin='round' d='m9 12.8 2.3 2.2L15 9.8m6 2.2a9 9 0 1 1-18 0 9 9 0 0 1 18 0'/></svg>") right 0.5rem center no-repeat;
+    background-size: 1.25rem;
+}
+.membership-page form fieldset input:invalid:not(:focus):not(:placeholder-shown) {
+    border: 2px solid #d93025;
+    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='%23d93025'><path stroke-linecap='round' stroke-linejoin='round' d='M12 9v3.75m9-.75a9 9 0 1 1-18 0 9 9 0 0 1 18 0m-9 3.75h.008v.008H12z'/></svg>") right 0.5rem center no-repeat;
+    background-size: 1.25rem;
 }
 .membership-page form .fieldset-title {
     margin-bottom: 3rem;
