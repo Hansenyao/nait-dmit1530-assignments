@@ -11,7 +11,3 @@ window.addEventListener("load",function(){
 document.querySelector("#close").addEventListener("click", function(){
     myModal.style.display="none";
 })
-/*
-document.querySelector(".toggle-btn").addEventListener("click", () => {
-    document.querySelector(".collapsed").classList.toggle("expanded");
-})*/
