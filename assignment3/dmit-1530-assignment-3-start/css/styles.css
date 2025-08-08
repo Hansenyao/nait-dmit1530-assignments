@@ -389,14 +389,16 @@ a:hover:not([class="btn"]) {
 }
 .membership-page form fieldset input:valid {
     /*border: 2px solid #0f9d58;*/
-    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='%230f9d58'><path stroke-linecap='round' stroke-linejoin='round' d='m9 12.8 2.3 2.2L15 9.8m6 2.2a9 9 0 1 1-18 0 9 9 0 0 1 18 0'/></svg>") right 0.5rem center no-repeat;
+    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='%237CB690'><path stroke-linecap='round' stroke-linejoin='round' d='m9 12.8 2.3 2.2L15 9.8m6 2.2a9 9 0 1 1-18 0 9 9 0 0 1 18 0'/></svg>") right 0.5rem center no-repeat;
     background-size: 1.25rem;
 }
-
 .membership-page form fieldset input:invalid:not(:focus):not(:placeholder-shown) {
     border: 2px solid #d93025;
-    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='%23d93025'><path stroke-linecap='round' stroke-linejoin='round' d='M12 9v3.75m9-.75a9 9 0 1 1-18 0 9 9 0 0 1 18 0m-9 3.75h.008v.008H12z'/></svg>") right 0.5rem center no-repeat;
+    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='%23E26F65'><path stroke-linecap='round' stroke-linejoin='round' d='M12 9v3.75m9-.75a9 9 0 1 1-18 0 9 9 0 0 1 18 0m-9 3.75h.008v.008H12z'/></svg>") right 0.5rem center no-repeat;
     background-size: 1.25rem;
+}
+.membership-page form fieldset .fieldset-input:has(input:invalid:not(:focus):not(:placeholder-shown)) label {
+    color: #d93025;
 }
 .membership-page form .fieldset-title {
     margin-bottom: 3rem;
@@ -436,7 +438,7 @@ a:hover:not([class="btn"]) {
     align-items: start;
 }
 .membership-page .fieldset-input .notice-text svg {
-    width: 4rem;
+    width: 2rem;
 }
 .membership-page .fieldset-input span {
     font-weight: 300;
@@ -481,10 +483,8 @@ a:hover:not([class="btn"]) {
     align-items: start;
     width: 100%;
     border: none;
-    background-color: white;
-}
-.membership-page .accordion-header p {
     color: var(--brand-blue);
+    background-color: white;
 }
 .membership-page .divider {
     height: 1px;
